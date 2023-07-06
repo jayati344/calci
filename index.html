@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>MY CALCULATOR</h1>
+    </div>
+   
+    
+    <div class="container text-center mt-4">
+        <input type="number" class="form-control mt-3" id="num1" placeholder="ENTER FIRST NUMBER">
+    <input type="number" class="form-control mt-3" id="num2" placeholder="ENTER SECOND NUMBER">
+    <button type="button" class="btn btn-primary mt-1" onclick="func1()">ADD</button>
+<button type="button" class="btn btn-secondary mt-1"onclick="func2()">SUBTRACT</button>
+<button type="button" class="btn btn-success mt-1"onclick="func3()">MULTIPLY</button>
+<button type="button" class="btn btn-danger mt-1"onclick="func4()">DIVIDE</button>
+</div>
+<div id="result">
+</div>
+<script>
+    function func1(){
+        var x = Number(document.getElementById('num1').value)
+        var y = Number(document.getElementById('num2').value)
+        var z = x+y
+        console.log(x+y)
+        var my_result = document.getElementById('result')
+        my_result.innerHTML = '<h3>' + "Addition is :"+String(z) +'</h3>'
+        my_result.className = 'alert alert-primary mt-3 text-center '
+    }
+    function func2(){
+        var x = Number(document.getElementById('num1').value)
+        var y = Number(document.getElementById('num2').value)
+        var z = x-y
+        console.log(x-y)
+        var my_result = document.getElementById('result')
+        my_result.innerHTML = '<h3>' + "Subtraction is :"+String(z) +'</h3>'
+        my_result.className = 'alert alert-primary mt-3 text-center'
+    }
+    function func3(){
+        var x = Number(document.getElementById('num1').value)
+        var y = Number(document.getElementById('num2').value)
+        var z = x*y
+        console.log(x*y)
+        var my_result = document.getElementById('result')
+        my_result.innerHTML = '<h3>' + "Multiplication is : "+String(z) +'</h3>'
+        my_result.className = 'alert alert-primary text-center mt-3 '
+    }
+    function func4(){
+        var x = Number(document.getElementById('num1').value)
+        var y = Number(document.getElementById('num2').value)
+        var z  = x/y
+        console.log(x/y)
+        var my_result = document.getElementById('result')
+        my_result.innerHTML = '<h3>' + "Division is : "+String(z.toFixed(2)) +'</h3>'
+        my_result.className = 'alert alert-primary text-center mt-3'
+    }
+        
+
+
+    
+
+
+
+</script>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
